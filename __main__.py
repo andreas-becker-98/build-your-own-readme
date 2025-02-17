@@ -74,8 +74,8 @@ if "usage" in sections:
 
 
 rprint(
-    "[bold]Generated README.md:[/bold]",
-    f"[blue]{str(md_doc)}[/blue]"
+    "[bold]Generated README.md:[/bold]\n\n",
+    f"[blue]{str(md_doc)}[/blue]",
     )
 
 
