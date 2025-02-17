@@ -1,4 +1,5 @@
-from os.path import dirname, isfile, join
+from os.path import dirname, isfile, join, exists
+from os import getcwd, mkdir
 
 
 def read_file(file_name: str) -> str | None:
@@ -9,3 +10,11 @@ def read_file(file_name: str) -> str | None:
     
     with open(abs_file_path) as file:
         return file.read()
+
+
+def is_running_in_project_folder():
+    return getcwd() == dirname(__file__);
+
+def create_output_folder():
+    if not exists("./output"):
+        mkdir("./output")

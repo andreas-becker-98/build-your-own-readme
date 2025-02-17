@@ -1,13 +1,15 @@
-from markdown import MarkdownDocument
-
+# InquirerPy
 from InquirerPy import inquirer
 from InquirerPy.base.control import Choice
 
-
+# Rich
 from rich import print as rprint
 
+# Own scripts
+from markdown import MarkdownDocument
 from license_generator import prompt_license, generate_license_text
 from inquirer_utils import prompt_text, prompt_multiline, prompt_yesno
+from file_utils import is_running_in_project_folder, create_output_folder
 
 
 rprint(
@@ -77,5 +79,11 @@ rprint(
     )
 
 
-with open("README.md", "w+") as file:
+output_file = "README.md"
+
+if is_running_in_project_folder():
+    create_output_folder()
+    output_file = f"output/{output_file}"
+
+with open(output_file, "w+") as file:
     file.write(str(md_doc))
