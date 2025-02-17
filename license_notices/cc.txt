@@ -1,0 +1,2 @@
+%PROJECT% by %AUTHOR% is licensed under CC %CC_TYPE_UPPER% 4.0.
+To view a copy of this license, visit https://creativecommons.org/licenses/%CC_TYPE%/4.0/
