@@ -71,6 +71,11 @@ if "usage" in sections:
     md_doc.add_section("Author Contact", author_contact)
 
 
+rprint(
+    "[bold]Generated README.md:[/bold]",
+    f"[blue]{str(md_doc)}[/blue]"
+    )
+
 
 with open("README.md", "w+") as file:
     file.write(str(md_doc))
