@@ -2,15 +2,7 @@ from InquirerPy import inquirer
 from InquirerPy.base.control import Choice
 from InquirerPy.separator import Separator
 from rich import print as rprint
-
-from os.path import isfile
-
-
 from datetime import date
-
-
-
-
 from file_utils import read_file
 
 

@@ -1,19 +1,3 @@
-
-
-# Elements
-
-class MarkdownDocumentElement:
-    pass
-
-
-class MarkdownTitle(MarkdownDocumentElement):
-    def __init__(self, title: str) -> None:
-        self.content = title
-    
-    def __str__(self) -> str:
-        return f"# {self.content}"
-
-
 class MarkdownDocument:
     def __init__(self) -> None:
         self.title = "Markdown Document"
